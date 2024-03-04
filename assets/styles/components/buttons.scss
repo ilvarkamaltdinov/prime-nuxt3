@@ -1,0 +1,140 @@
+.button {
+  display: flex;
+  height: 42px;
+  min-height: 42px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: .16s;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-black;
+  border-radius: 24px;
+}
+
+.button--callback {
+  width: 160px;
+  background-color: $color-green;
+  color: $color-white;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.button--title {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.button--text {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.button--marks {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.button--comparisons {
+  position: sticky;
+  bottom: 8px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  gap: 4px;
+}
+
+.button--comparison {
+  height: 42px;
+  width: 42px;
+  min-width: 42px;
+  background: $color-grey-light;
+  color: $color-white;
+  transition: .16s;
+}
+
+.button--comparison-active {
+  background: $color-white;
+  color: $color-black;
+}
+
+.button--grey {
+  width: 100%;
+  background: $color-grey-light;
+  color: $color-white;
+}
+
+.button--comparison span {
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+}
+
+.button--comparison span svg {
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+}
+
+.button--white {
+  background: $color-white;
+  color: $color-black;
+}
+
+.button--more {
+  width: 100%;
+  background: $color-black;
+  color: $color-white;
+  border: 1px solid $color-white;
+  margin-top: 16px;
+}
+
+.button--credit {
+  background: $color-white;
+  color: $color-black;
+}
+
+.button--border {
+  color: $color-white;
+  border: 1px solid $color-white;
+}
+
+.button--border-opacity {
+  color: $color-black;
+  border: 1px solid $color-black;
+}
+
+.button--black {
+  background: $color-black;
+  color: $color-white;
+}
+
+.button--black-border {
+  background: $color-black;
+  color: $color-white;
+  border: 1px solid $color-white;
+}
+
+.button--opacity {
+  background: none;
+  border: 1px solid $color-white;
+  color: $color-white;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .button {
+    transition: .16s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .button--marks {
+    margin-top: 0;
+  }
+
+}

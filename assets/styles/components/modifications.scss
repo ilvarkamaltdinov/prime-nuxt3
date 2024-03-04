@@ -1,0 +1,142 @@
+.modifications {
+
+}
+
+.modifications-tabs {
+  @include horizontal-scrollbar;
+  width: calc(100% + 32px);
+  overflow-y: scroll;
+  margin-left: -16px;
+  padding: 12px 0 12px 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 32px);
+    height: 1px;
+    background: $color-grey-light;
+    bottom: 0;
+    left: 16px;
+  }
+}
+
+.modifications-tabs-tab {
+  @include filter;
+  background: $color-grey;
+  min-width: max-content;
+  padding: 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .16s;
+}
+
+.modifications-tabs-tab--active {
+  background: $color-grey-light;
+}
+
+.modifications__complectations {
+  display: flex;
+  flex-direction: column;
+}
+
+.modifications__complectations-complectation {
+  padding: 12px 0;
+  border-bottom: 1px solid $color-grey-light;
+}
+
+.modifications__complectations-complectation-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modifications__complectations-complectation-tech {
+  font-size: 14px;
+  margin-top: 8px;
+  display: flex;
+  gap: 25px;
+}
+
+.modifications__complectations-complectation-tech span {
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background: $color-white;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: -13px;
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.modifications__complectations-complectation-price {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.modifications__complectations-complectation-price span {
+  &:first-child {
+    font-weight: 700;
+  }
+
+  &:last-child {
+    font-size: 14px;
+  }
+}
+
+.modifications__complectations-complectation-controls {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modifications__complectations-complectation-controls .button {
+  &:nth-child(1) {
+    width: calc(100% - 50px);
+  }
+
+  &:last-child {
+    width: 100%;
+  }
+}
+
+.modifications__complectations-complectation-comparison {
+
+}
+
+@media (min-width: $desktop-width) {
+  .modifications__complectations-complectation-line {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .modifications__complectations-complectation-line-group {
+    &:last-child {
+      width: 200px;
+    }
+  }
+  .modifications__complectations-complectation-tech {
+    margin-top: 24px;
+  }
+  .modifications__complectations-complectation-price {
+    margin-top: 24px;
+  }
+}

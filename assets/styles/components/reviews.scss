@@ -1,0 +1,114 @@
+.reviews {
+  margin-top: 16px;
+}
+
+.reviews__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.reviews__item {
+  width: 100%;
+  height: 200px;
+  background: $color-black;
+  position: relative;
+  aspect-ratio: 4/3;
+}
+
+.reviews__item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.65;
+  background-color: $color-black;
+  border-radius: 4px;
+  transition: all 0.3s;
+  z-index: 8;
+}
+
+.reviews__item:hover:before {
+  opacity: 0;
+}
+
+.reviews__item--active:before {
+  display: none;
+}
+
+.reviews__link {
+  padding: 16px;
+  background-color: $color-black;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.2s cubic-bezier(0.37, 0, 0.63, 1);
+  transition-property: background-color;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviews__title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  z-index: 9;
+  position: relative;
+  text-align: center;
+  color: $color-white;
+}
+
+.reviews__picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.reviews__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reviews__item .nuxt-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  left: calc(50% - 12px);
+  top: calc(50% - 12px);
+  z-index: 9;
+  position: absolute;
+  color: #fff;
+}
+
+.reviews .button {
+  margin-top: 16px;
+  width: 100%;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .reviews__list {
+    gap: 12px;
+  }
+  .reviews__item {
+    width: calc((100% - 36px) / 4);
+    cursor: pointer;
+  }
+  .reviews .button {
+    margin-top: 24px;
+  }
+}

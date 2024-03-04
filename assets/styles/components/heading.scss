@@ -1,0 +1,51 @@
+.heading {
+
+}
+
+.heading--h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading--h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-grey-light;
+}
+
+.heading--h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.heading--h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+
+@media (max-width: $iphone-12) {
+  .heading--h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .heading--h1 {
+    font-size: 48px;
+  }
+  .heading--h2 {
+    font-size: 48px;
+  }
+  .heading--h1-grey {
+    color: $color-grey;
+  }
+}

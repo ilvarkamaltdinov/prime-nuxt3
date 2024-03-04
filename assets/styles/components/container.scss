@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container--thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .container {
+    width: $tablet-width;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+  }
+}

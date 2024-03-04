@@ -1,0 +1,20 @@
+.render {
+  width: 100%;
+}
+
+.render picture {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.render picture img {
+  width: 100%;
+  aspect-ratio: 3/1.6;
+  object-fit: contain;
+}
+
+@media (min-width: $desktop-width) {
+ 
+}

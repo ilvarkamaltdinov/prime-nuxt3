@@ -1,0 +1,112 @@
+.services {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+.services__line {
+  @include filter;
+  @include horizontal-scrollbar;
+  display: flex;
+  background: $color-grey;
+  width: calc(100% + 16px);
+  margin-left: 16px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border-radius: 16px;
+  padding: 16px 0;
+}
+
+.services__item {
+  padding: 0 16px;
+  height: 140px;
+  width: 260px;
+  min-width: 260px;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  border-right: 1px solid $color-grey-light;
+}
+
+.services__item-image {
+  width: 160px;
+  height: auto;
+  position: absolute;
+  right: 16px;
+  top: 64px;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .services {
+    width: 100%;
+    margin-left: 0;
+  }
+  .services__item {
+    flex: 1;
+    height: 140px;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    border-right: 1px solid $color-grey-light;
+    width: 33%;
+    max-width: 33%;
+    min-width: 33%;
+    cursor: pointer;
+    border-bottom: 1px solid $color-grey-light;
+    padding: 16px;
+
+    &:nth-child(1) {
+      overflow: hidden;
+
+      .services__item-title {
+        margin-top: -16px;
+        display: block;
+      }
+    }
+
+    &:nth-child(2) {
+      overflow: hidden;
+
+      .services__item-title {
+        margin-top: -16px;
+        display: block;
+      }
+    }
+
+    &:nth-child(3) {
+      overflow: hidden;
+
+      .services__item-title {
+        margin-top: -16px;
+        display: block;
+      }
+    }
+
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+
+    &:nth-child(4) {
+      border-bottom: 0;
+    }
+
+    &:nth-child(5) {
+      border-bottom: 0;
+    }
+
+    &:nth-child(6) {
+      border-bottom: 0;
+    }
+  }
+  .services__line {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 16px;
+  }
+  .services__item-image {
+    top: 40px;
+  }
+}

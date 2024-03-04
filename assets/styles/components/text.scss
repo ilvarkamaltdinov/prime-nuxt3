@@ -1,0 +1,26 @@
+.text__p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text__p--home {
+  font-size: 14px;
+  line-height: 16px;
+  width: 80%;
+}
+
+.text__o-list {
+  margin-top: 24px;
+  padding-left: 16px;
+}
+
+@media screen and (min-width: $desktop-width) {
+
+  .text__p--home {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 40%;
+  }
+}

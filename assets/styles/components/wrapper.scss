@@ -1,0 +1,10 @@
+.wrapper {
+  padding-top: 67px;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .wrapper {
+    padding-top: 69px;
+  }
+
+}

@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: inherit;
+  margin-inline-start: inherit;
+  margin-inline-end: inherit;
+  padding-block-start: inherit;
+  padding-inline-start: inherit;
+  padding-inline-end: inherit;
+  padding-block-end: inherit;
+  min-inline-size: inherit;
+}
+
+legend {
+  float: left;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+body,
+button,
+select,
+input,
+textarea {
+  font-family: $fontFamily, $fontApple;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  background: transparent;
+
+  &::placeholder {
+    font-family: $fontFamily, $fontApple;
+  }
+}
+
+body {
+  font-weight: 400;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: $fontFamily, $fontApple;
+  background: $color-black;
+  color: $color-white;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+}

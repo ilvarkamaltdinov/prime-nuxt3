@@ -1,0 +1,56 @@
+.contacts {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacts__info-group-value {
+  font-weight: 700;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 300px;
+  background: $color-grey;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ymaps-2-1-79-inner-panes {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
+
+.contacts__map .ymap-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .contacts {
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .contacts__info {
+    width: 260px;
+    gap: 24px;
+    min-width: 260px;
+  }
+  .contacts__info-group-value {
+    margin-top: 8px;
+  }
+  .contacts__map {
+    height: 204px;
+  }
+}

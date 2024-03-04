@@ -1,0 +1,48 @@
+.tech {
+
+}
+
+.tech--column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.tech--line {
+  @include horizontal-scrollbar;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 16px;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  padding-left: 16px;
+}
+
+.tech__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.tech--line .tech__item {
+  min-width: max-content;
+}
+
+
+.tech__item-icon {
+  width: 24px;
+  height: 24px;
+  color: $color-white;
+}
+
+.tech--column .tech__item {
+  padding: 16px 0;
+  border-bottom: 1px solid $color-grey-light;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}

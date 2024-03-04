@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik/Rubik.ttf');
+  font-display: swap;
+}
+
+$fontFamily: 'Rubik';
+$fontApple: -apple-system, system-ui, BlinkMacSystemFont, “Segoe UI”, Roboto, “Helvetica Neue”, Arial, sans-serif;
+
+$tablet-width: 768px;
+$desktop-width: 1280px;
+$big-desktop-width: 1440px;
+$desktop-large-width: 1920px;
+$mobile-width-only: 767px;
+$iphone-mini-only: 320px;
+$iphone-se-only: 375px;
+$iphone-12: 390px;
+
+$color-black: #2D2D2D;
+$color-white: #FDFDFD;
+$color-orange: #ff5e0e;
+$color-grey: #383838;
+$color-grey-light: #5e5e5e;
+$color-red: #ef3e3e;
+$color-card: #d4d4d4;
+$color-green: #36b555;
+
+$transition-hover: 0.2s cubic-bezier(0.37, 0, 0.63, 1);
+
+$box-shadow: 0 0 8px rgb(0 0 0 / 12%);
+$box-shadow-green: 0 2px 8px rgb(76 175 80 / 32%);
+$box-shadow-hover: 0 2px 8px rgb(0 0 0 / 16%);
+$border-radius: 16px;
+$border-radius-small: 6px;
+$border-radius-smallest: 4px;
+$border-radius-maximum: 24px;
+$border-radius-max: 24px;
+
+:root {
+  --offerCreditColor: transparent;
+}

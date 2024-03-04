@@ -1,0 +1,13 @@
+.nuxt-icon {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuxt-icon svg {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  margin-bottom: 0 !important;
+}

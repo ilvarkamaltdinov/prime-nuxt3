@@ -1,0 +1,101 @@
+.range {
+  width: calc(100% + 32px);
+  height: 88px;
+  padding: 0 56px 0 32px;
+  overflow-x: hidden;
+}
+
+.range__inputs {
+  width: 100%;
+  display: flex;
+}
+
+.slider-horizontal {
+  height: 1px !important;
+}
+
+.slider-connect {
+  background: $color-grey-light !important;
+}
+.range .slider-horizontal .slider-handle {
+  width: 16px;
+  height: 16px;
+  z-index: 10;
+  top: -8px;
+}
+
+.slider-horizontal .slider-handle {
+  width: 24px !important;
+  height: 24px !important;
+  top: -11px !important;
+}
+
+.slider-tooltip {
+  //bottom: -24px !important;
+  background: none !important;
+  border: none !important;
+  font-size: 10px !important;
+
+  &:before {
+    display: none !important;
+  }
+}
+
+.slider-horizontal .slider-tooltip-bottom {
+  top: 12px !important;
+}
+
+.range__select {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 48px;
+  padding: 0 12px;
+  appearance: none;
+  position: relative;
+
+  &:first-child {
+
+  }
+}
+
+.range__input {
+  height: 48px;
+  padding: 0 8px;
+  border: none;
+  font-size: 16px;
+  width: 50%;
+  color: $color-white;
+}
+
+.range .slider-tooltip {
+  top: 20px !important;
+  font-weight: 400 !important;
+  color: $color-white;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .range__select {
+  }
+  .range__inputs {
+    width: 100%;
+    margin-left: 0;
+  }
+  .range__input {
+  }
+  .range {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: -16px;
+  }
+  .range {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    overflow-x: visible;
+    height: 52px;
+  }
+  .range .slider-tooltip {
+    top: 24px !important;
+  }
+}

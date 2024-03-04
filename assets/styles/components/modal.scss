@@ -1,0 +1,259 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 59px;
+  left: 0;
+  z-index: 20;
+  transition: 0.32s ease-in-out;
+  transform: translateY(100%);
+}
+
+.modal__benefits {
+  margin-bottom: 16px;
+}
+
+.modal__head-close {
+  position: relative;
+  font-size: 32px;
+
+  right: 4px;
+}
+
+.modal--open {
+  transform: translateY(0);
+}
+
+.modal__overflow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 1;
+  display: none;
+}
+
+.modal__window {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: calc(100% - 56px);
+  padding: 0 16px;
+  z-index: 2;
+  background: $color-black;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.modal__head {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+}
+
+.modal__title {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  min-width: calc(100% - 40px);
+
+
+}
+
+.modal__body {
+  @include vertical-scrollbar;
+  width: calc(100% + 32px);
+  height: calc(100% - 80px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 24px 16px;
+  margin-left: -16px;
+}
+
+.modal__from-title {
+  text-transform: uppercase;
+}
+
+.modal__from-title--mobile {
+  display: block;
+}
+
+.modal__from-title--desktop {
+  display: none;
+}
+
+.modal__from-title-bold {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal__from-title-regular {
+  font-weight: 700;
+}
+
+.modal__form-image {
+  margin: 16px auto 0;
+  height: 240px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__form-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.modal__form-image--render img {
+  object-fit: contain;
+}
+
+.modal__form-buy-options {
+  margin-top: 16px;
+}
+
+.modal__form-personal-line {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__text {
+  margin-bottom: 24px;
+}
+
+.modal__form-personal {
+  margin-top: 16px;
+}
+
+.modal__form-personal-line-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.modal__form-personal-line-group .button {
+  width: 100%;
+}
+
+.modal__form-image .modal__form-image--render {
+  object-fit: contain;
+}
+
+.modal__form-block-tech {
+  padding: 8px;
+  @include filter;
+  border-radius: 24px;
+  margin-top: 16px;
+  background: $color-grey;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .modal {
+    transform: translateX(-200%);
+    top: 0;
+    opacity: 0;
+    transition: opacity .16s;
+  }
+  .modal--open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .modal__window {
+    @include filter;
+    padding: 0 24px;
+    border-radius: 16px;
+    width: $desktop-width;
+    top: 84px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: calc(100% - 168px);
+  }
+  .modal__window--small {
+    width: 420px;
+    height: auto;
+  }
+  .modal__window--small .modal__title {
+    font-size: 20px;
+  }
+  .modal__overflow {
+    cursor: pointer;
+    display: block;
+  }
+  .modal__head-close {
+    cursor: pointer;
+  }
+  .modal__title {
+    font-size: 24px;
+  }
+  .modal__from-title--mobile {
+    display: none;
+  }
+  .modal__from-title--desktop {
+    display: block;
+  }
+  .modal__from-content {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+  .modal__form-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal__form-image {
+    width: 500px;
+    min-width: 500px;
+    height: 380px;
+    margin: 0;
+  }
+
+  .modal__from-title-bold {
+    font-size: 40px;
+  }
+  .modal__from-title-regular {
+    margin-top: 8px;
+  }
+  .modal__form-block-title {
+    order: 1;
+  }
+  .modal__form-block-tech {
+    order: 2;
+  }
+  .modal__form-block-calculator {
+    order: 3;
+  }
+  .modal__form-block-buy-options {
+    order: 4;
+  }
+  .modal__form-buy-options {
+    margin-top: 30px;
+  }
+  .modal__form-personal-line {
+    flex-direction: row;
+  }
+  .modal__form-personal-line-group {
+    width: 100%;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+  .modal__form-personal-line-group .button {
+    flex: 1;
+  }
+  .form__control {
+    width: 50%;
+  }
+}

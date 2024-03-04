@@ -1,0 +1,92 @@
+.section {
+
+}
+
+.section--thanks {
+  margin-top: 48px;
+}
+
+.section--home {
+  z-index: 1;
+}
+
+.section--banner {
+  margin-top: -52px;
+  position: relative;
+  z-index: -1;
+}
+
+.section--filters {
+  margin-top: 24px;
+  padding: 16px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.section--marks {
+  margin-top: 24px;
+}
+
+.section--folders {
+  margin-top: 24px;
+}
+
+.section--folders-catalog {
+  margin-top: 48px;
+}
+
+.section--benefits {
+  position: relative;
+  z-index: 2;
+  margin-top: -160px;
+}
+
+.section--title {
+  margin-top: 24px;
+}
+
+.section--banks {
+  margin-top: 48px;
+}
+
+.section--home-folders {
+  margin-top: 48px;
+}
+
+.section--contacts {
+  margin-top: 48px;
+}
+
+.section--services {
+  margin-top: 48px;
+}
+
+.section--sets {
+  margin-top: 48px;
+}
+
+.section--body-types {
+  margin-top: 24px;
+}
+
+.section--catalog {
+  margin-top: 24px;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .section--marks {
+    margin-top: 32px;
+  }
+
+  .section--filters-home {
+    margin-top: -64px;
+  }
+
+  .section--banner {
+    margin-top: -70px;
+  }
+  .section--mark {
+    margin-bottom: -64px;
+  }
+
+}

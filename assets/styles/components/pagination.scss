@@ -1,0 +1,50 @@
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin-top: 16px;
+  padding-bottom: 24px;
+}
+
+.pagination li {
+  border: none;
+  padding: 4px;
+  margin: 0 4px;
+  font-size: 14px;
+
+  &:first-child {
+    //background: $ color-info;
+  }
+
+  &:last-child {
+    //background: $ color-info;
+  }
+
+  &.active a {
+    color: $color-grey-light;
+  }
+
+  &.prev.disabled {
+    display: none;
+  }
+  &.next.disabled {
+    display: none;
+  }
+
+  &:hover {
+
+  }
+
+}
+
+.pagination li.active a {
+
+}
+
+.pagination li a {
+  display: block;
+  cursor: pointer;
+
+}

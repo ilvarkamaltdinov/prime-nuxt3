@@ -1,0 +1,268 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 10;
+}
+
+.header__inner {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__contacts {
+  margin-left: auto;
+}
+
+.header__burger {
+  padding: 16px 0;
+  width: 64px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+
+.header__burger-line {
+  height: 1px;
+  width: 100%;
+  background: $color-white;
+  position: relative;
+  left: 0;
+  transition: .16s;
+}
+
+.header__burger--active .header__burger-line {
+  &:nth-child(1) {
+    left: -8px;
+  }
+
+  &:nth-child(2) {
+    left: 4px;
+  }
+
+  &:nth-child(3) {
+    left: -8px;
+  }
+}
+
+.header__phone .phone__span {
+  display: none;
+}
+
+.header__phone .nuxt-icon {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+}
+
+.header__menu {
+  position: fixed;
+  z-index: 15;
+  top: 59px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 59px);
+  background: $color-black;
+}
+
+.header__menu-nav {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background: linear-gradient(180deg, $color-white 0%, $color-black 120%);
+  }
+}
+
+.header__menu-item {
+  text-transform: uppercase;
+}
+
+.header__menu-content {
+
+}
+
+.header__nav {
+  font-weight: 300;
+  display: none;
+}
+
+.header__contacts-address {
+  display: none;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.header__logo {
+  width: 160px;
+}
+
+.header__logo a {
+  width: 100%;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.header__menu-folders {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  overflow: hidden;
+  height: 209px;
+}
+
+.header__menu-folders .heading {
+  display: none;
+}
+
+.header__menu .container {
+  height: 100%;
+}
+
+.header__menu-wrapper {
+  height: 100%;
+}
+
+.header__menu-content {
+  height: calc(100% - 253px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.header__menu-marks {
+  display: none;
+}
+
+.header__menu-phone {
+  height: 52px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header__folders-slider-slide {
+  width: 240px !important;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .header__logo {
+    order: 1;
+    transition: .16s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+  .header__contacts-address {
+    display: block;
+  }
+  .header__burger {
+    order: 2;
+    cursor: pointer;
+  }
+  .header__nav {
+    order: 3;
+    display: flex;
+    margin-left: 40px;
+    gap: 24px;
+    text-transform: uppercase;
+
+  }
+  .header__contacts {
+    order: 4;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .header__phone {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid $color-white;
+  }
+  .header__phone .phone__span {
+    display: block;
+  }
+  .header__phone .phone__icon {
+    display: none !important;
+  }
+  .header__nav a {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      width: 0;
+      left: 0;
+      height: 2px;
+      background: $color-white;
+      transition: .16s;
+    }
+
+  }
+  .header__nav a.router-link-active {
+    &:after {
+      width: 100%;
+    }
+  }
+  .header__menu-item, .header__nav a {
+    transition: .16s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+  .header__menu-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 32px;
+  }
+  .header__menu-nav {
+    min-width: 200px;
+    width: 200px;
+    height: calc(100% - 160px);
+    gap: 32px;
+    margin-top: 16px;
+  }
+  .header__menu-content {
+    height: auto;
+    width: calc(100% - 240px);
+  }
+  .header__menu-folders .heading {
+    display: block;
+  }
+  .header__folders-slider-slide {
+    width: 33% !important;
+  }
+  .header__menu-phone {
+    display: none;
+  }
+  .header__menu-marks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+  }
+
+}

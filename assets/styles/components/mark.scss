@@ -1,0 +1,171 @@
+.mark-info__wrapper-logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mark-info__wrapper-logo .nuxt-icon {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+}
+
+.mark-info__wrapper-dealer {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mark-info__wrapper-text {
+  position: relative;
+  margin-top: 12px;
+}
+
+.mark-info__wrapper-text-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.mark-info__wrapper-text-grey {
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-white;
+  opacity: .05;
+  display: none;
+}
+
+.mark-info__wrapper-text-sub-title {
+  color: $color-white;
+  margin-top: 32px;
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.mark-info__wrapper-text-sub-title span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.mark-info__wrapper-banner {
+  @include filter;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 16px;
+  height: 100px;
+
+}
+
+.mark-info__wrapper-banner picture {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  display: flex;
+  margin-top: 1px;
+  border-radius: 16px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.mark-info__wrapper-banner picture img {
+  max-width: 100%;
+  min-width: 100%;
+  width: auto;
+  height: 100px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.mark-info__wrapper-car {
+  width: 100%;
+  aspect-ratio: 3/2;
+  margin-top: -120px;
+}
+
+.mark-info__wrapper-car picture {
+  width: 100%;
+  display: flex;
+  pointer-events: none;
+  user-select: none;
+}
+
+.mark-info__wrapper-car picture img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.mark-info__wrapper {
+  position: relative;
+}
+
+.mark-info__wrapper-dealer-official {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .mark-info__wrapper-pictures {
+    position: relative;
+  }
+  .mark-info__wrapper-text-title {
+    font-size: 48px;
+  }
+  .mark-info__wrapper-banner {
+    position: absolute;
+    top: 160px;
+    height: 160px;
+    margin-top: 0;
+    left: 16px;
+  }
+  .mark-info__wrapper-banner picture img {
+    height: 160px;
+  }
+  .mark-info__wrapper .container {
+    position: relative;
+  }
+  .mark-info__wrapper-text-sub-title {
+    font-size: 16px;
+    margin-top: 96px;
+    margin-left: 32px;
+  }
+  .mark-info__wrapper-text-sub-title span {
+    font-size: 24px;
+    margin-top: 16px;
+  }
+  .mark-info__wrapper-car {
+    width: 800px;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+    margin-top: -240px;
+  }
+  .mark-info__wrapper-dealer-official {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 72px;
+    font-size: 64px;
+    color: $color-white;
+    opacity: .05;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .mark-info__wrapper-banner picture {
+    width: 100%;
+    max-width: 100%;
+  }
+  .mark-info__wrapper-text-grey {
+    display: none;
+  }
+}

@@ -1,0 +1,164 @@
+.skeleton-element-light {
+  background: $color-black;
+  opacity: .16;
+}
+
+.skeleton-element-dark {
+  background: $color-black;
+  opacity: .16;
+}
+
+.skeleton__offer {
+  height: 347px;
+  width: 100%;
+  padding: 8px;
+  background: $color-grey-light;
+  border-radius: 16px;
+}
+
+.skeleton__folder {
+  height: 292px;
+  width: 100%;
+  padding: 8px;
+  background: $color-grey-light;
+}
+
+.mini-skeleton__offer-slider {
+  height: 184px;
+  width: calc(100% + 16px);
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.mini-skeleton__folder-image {
+  height: 142px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.mini-skeleton__offer-title {
+  height: 38px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.mini-skeleton__folder-title {
+  height: 38px;
+  width: 100%;
+}
+
+.mini-skeleton__offer-tech {
+  height: 16.5px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.mini-skeleton__price {
+  height: 19px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.mini-skeleton__controls {
+  height: 52px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.skeleton__folder-page-title {
+  height: 28.5px;
+  width: 100%;
+}
+
+.skeleton__folder-page-sub-title {
+  height: 19px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.skeleton__folder-page-colors {
+  height: 24px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.skeleton__folder-page-complectation {
+  height: 79px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.skeleton__folder-page-render {
+  height: 160px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.skeleton__folder-page-bonuses {
+  height: 142px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skeleton__folder-page-bonuses-item {
+  height: 42px;
+}
+
+.skeleton__folder-page-buy-options {
+  height: 88.5px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .skeleton__offer {
+    width: calc(25% - 18px);
+    border-radius: 24px;
+  }
+  .skeleton__folder {
+    width: calc(33% - 23px);
+  }
+  .skeleton__folder-page {
+
+  }
+  .skeleton__folder-page-title {
+    height: 47.22px;
+  }
+  .skeleton__folder-page-sub-title {
+    height: 21.11px;
+  }
+  .skeleton__folder-desktop-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+  }
+  .skeleton__folder-desktop-left {
+    width: calc(40% - 60px);
+  }
+  .skeleton__folder-desktop-right {
+    width: calc(60% - 60px);
+  }
+  .skeleton__folder-page-render {
+    height: 320px;
+    margin-top: 0;
+  }
+  .skeleton__folder-page-bonuses {
+    height: 92px;
+    flex-wrap: wrap;
+    gap: 9px;
+    width: 100%;
+    margin-top: -100px;
+  }
+  .skeleton__folder-page-bonuses-item {
+    width: calc(100% - 146px);
+    height: 41px;
+
+    &:last-child {
+      width: 137px;
+      height: 92px;
+      flex-direction: column;
+    }
+  }
+}

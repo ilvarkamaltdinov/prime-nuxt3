@@ -1,0 +1,365 @@
+.form {
+  counter-reset: form;
+}
+
+.form__banner {
+  height: 240px;
+  width: 100%;
+  position: relative;
+}
+
+.form__group {
+  position: relative;
+}
+
+.form__title {
+  font-weight: 700;
+}
+
+.form__fieldset--controls {
+  @include filter;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-top: 12px;
+  backdrop-filter: blur(50px);
+}
+
+.form__fieldset--controls-no-margin {
+  margin-top: 16px;
+}
+
+.form__fieldset--calculator {
+  @include filter;
+  padding: 16px;
+  border-radius: 16px;
+  background: $color-grey;
+  margin-top: 16px;
+}
+
+.form__fieldset--calculator .calculator {
+  margin: 0;
+}
+
+.form__banner-content {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form__banner-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.form__banner-text {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.form__banner-picture {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.form__banner-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.form__fieldset-title{
+  margin-bottom: 12px;
+}
+.form__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form__controls--exchange {
+  min-height: auto;
+}
+
+.form__text {
+  padding: 16px;
+  box-shadow: $box-shadow;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+.form__fsspp {
+  padding: 16px;
+  box-shadow: $box-shadow;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__fsspp img {
+  width: 48px;
+}
+
+.form__line {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__offer-complectation {
+  margin-top: 8px;
+}
+
+.form__fieldset--personal-auto {
+  order: 0;
+  width: 100%;
+}
+
+.form__fieldset--controls {
+  order: 1;
+}
+
+.form__offer {
+  order: 2;
+}
+
+.form__fieldset--calculator {
+  order: 3;
+}
+
+.form__fieldset--personal {
+  order: 4;
+}
+
+.form__offer-active {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.form__offer-active-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.form__offer-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.form__offer {
+  margin-top: 16px;
+
+
+}
+
+.form__offer-image {
+  width: 100%;
+  display: block;
+  margin-top: 24px;
+}
+
+.form__offer-image img {
+  width: 100%;
+}
+
+.form__offer-prices {
+
+
+  margin-top: 12px;
+}
+
+
+.form__calculator-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.form__calculator-info-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form__calculator-info-title {
+  font-size: 12px;
+}
+
+.form__calculator-info-value {
+  font-weight: 700;
+}
+
+.form__personal .button {
+  width: 100%;
+}
+
+.form__control-error {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.form__personal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.form__steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 16px;
+  box-shadow: $box-shadow;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+.form__steps-item {
+  width: calc(25% - 12px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.form__steps-item-number {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 32px;
+  font-style: italic;
+}
+
+.form__errors {
+  position: absolute;
+  top: -16px;
+  font-size: 12px;
+  left: 0;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .form__banner {
+    height: 410px;
+  }
+  .form__banner-title {
+    font-size: 40px;
+  }
+  .form__line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 24px;
+    flex-direction: row;
+  }
+  .form__controls {
+    gap: 24px;
+  }
+  .form__fieldset--controls {
+    flex: 1;
+    margin-top: 0;
+  }
+  .form__calculator {
+    margin-top: 0;
+  }
+  .form__offer {
+    width: 100%;
+    order: 4;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .form__fieldset--calculator {
+    flex: 1;
+    order: 2;
+    margin-top: 0;
+  }
+  .form__fieldset--personal {
+    order: 3;
+  }
+  .form__offer-info {
+    width: calc(50% - 20px);
+  }
+  .form__tech.tech--line {
+    width: calc(50% - 20px);
+    margin-top: -200px;
+  }
+  .form__calculator-info {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-top: -130px;
+  }
+  .form__offer-image {
+    height: 300px;
+    width: 50%;
+    margin-top: -8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .form__offer-title {
+    margin-top: 12px;
+  }
+
+  .form__offer-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .form__calculator-info-item {
+    width: auto;
+  }
+  .form__fieldset--personal-auto {
+    flex-direction: row;
+    width: 100%;
+  }
+  .form__controls--exchange .form__controls-item {
+    flex: 1;
+  }
+  .form__fieldset {
+    &::before {
+      left: -16px;
+      top: auto;
+      bottom: -60px;
+      z-index: 1;
+      font-weight: 900;
+    }
+  }
+  .form__personal {
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .form__personal--column {
+    flex-direction: column;
+
+    .modal__form-personal-line-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .form__controls-item {
+    flex: 1;
+  }
+}

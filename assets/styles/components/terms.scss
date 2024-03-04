@@ -1,0 +1,26 @@
+.terms {
+
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: $border-radius-smallest;
+}
+
+.terms__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.terms__item {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+
+
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

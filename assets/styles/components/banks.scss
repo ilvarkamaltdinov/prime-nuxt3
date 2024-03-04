@@ -1,0 +1,30 @@
+.banks {
+  margin-top: 16px;
+}
+
+.banks__item.f-carousel__slide {
+  height: 64px;
+  width: calc(50% - 8px);
+  margin-right: 16px;
+  background: $color-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banks__item-img {
+  max-width: 64%;
+  width: 64%;
+  max-height: 64%;
+  height: 64%;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .banks__item.f-carousel__slide {
+    --f-carousel-spacing: 16px;
+    padding: 0;
+    width: calc(16% - 6px) !important;
+  }
+}

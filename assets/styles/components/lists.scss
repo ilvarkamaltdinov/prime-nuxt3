@@ -1,0 +1,88 @@
+.list__marks-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.list__marks-icon-wrapper {
+  @include filter;
+  width: 96px;
+  min-width: 96px;
+  height: 96px;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-grey;
+  transition: .16s;
+}
+
+.list__marks-icon-wrapper .nuxt-icon {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+}
+
+.list__marks-link-title {
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.list__marks--home {
+  display: flex;
+  gap: 16px;
+  width: calc(100% + 32px);
+  padding: 0 16px;
+  margin-left: -16px;
+  @include horizontal-scrollbar;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  justify-content: space-between;
+}
+
+.list__marks--catalog {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list__marks--catalog .list__marks-item {
+  width: calc(33% - 12px);
+}
+
+@media screen and (min-width: $desktop-width) {
+  .list__marks--catalog {
+    display: block;
+    width: 100%;
+    column-count: auto;
+    column-width: 110px;
+    column-gap: 40px;
+  }
+  .list__marks-link {
+    cursor: pointer;
+  }
+  .list__marks-item {
+    transition: .16s;
+
+    &:hover {
+      opacity: .8;
+
+      .list__marks-icon-wrapper {
+
+        background: $color-grey-light;
+      }
+    }
+  }
+  .list__marks--catalog .list__marks-item {
+    break-inside: avoid;
+    height: 160px;
+    width: auto;
+  }
+  .list__marks--catalog .list__marks-item .list__marks-link {
+    margin-bottom: 40px;
+  }
+}

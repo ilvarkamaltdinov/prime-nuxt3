@@ -1,0 +1,59 @@
+.colors {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.colors--form {
+  gap: 8px;
+  max-height: 100px;
+  @include vertical-scrollbar;
+  overflow-y: scroll;
+  padding-right: 8px;
+}
+
+.colors__item {
+  padding: 12px;
+  border-radius: 32px;
+  background: $color-grey-light;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .16s;
+  cursor: pointer;
+  @include filter;
+
+}
+
+.colors--form .colors__item {
+  padding: 4px 8px;
+
+}
+
+.colors__item--active {
+  background: $color-white;
+  color: $color-black;
+
+  .color__item-color {
+    border: 1px solid $color-black;
+  }
+}
+
+.color__item-name {
+  font-size: 14px;
+}
+
+.color__item-color {
+  border: 1px solid $color-white;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 24px;
+}
+
+.colors--form .color__item-color {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+}

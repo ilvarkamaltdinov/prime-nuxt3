@@ -1,0 +1,99 @@
+.f-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.f-carousel .f-carousel__nav {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 116px;
+  height: 40px;
+}
+
+.f-carousel .f-carousel__nav button {
+  @include filter;
+  color: $color-white;
+  background: $color-grey;
+  width: 40px;
+  height: 40px;
+  border-radius: 24px;
+}
+
+.f-carousel .f-carousel__dots {
+  bottom: 16px;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.f-carousel .f-carousel__dots .f-carousel__dot {
+  display: none;
+}
+
+.f-carousel .f-carousel__dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: $color-white;
+  opacity: .5;
+  transition: .48s;
+}
+
+.f-carousel .f-carousel__dots .is-current button {
+  width: 84px;
+  opacity: 1;
+}
+
+.f-carousel--no-controls .f-carousel__dots {
+  display: none;
+}
+
+.f-carousel--no-controls .f-carousel__nav {
+  display: none;
+}
+
+.f-carousel--no-arrows .f-carousel__nav {
+  display: none;
+}
+
+.f-carousel--no-arrows .f-carousel__dots {
+  position: absolute;
+  justify-content: center;
+  bottom: -12px;
+}
+
+.f-carousel--folders {
+  margin-top: 24px !important;
+}
+
+.f-carousel--folders-menu .f-carousel__nav {
+  display: none;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .f-carousel--no-arrows .f-carousel__dots {
+    justify-content: flex-end;
+    bottom: -24px;
+  }
+  .f-carousel .f-carousel__nav {
+    top: 1px;
+  }
+  .f-carousel__viewport {
+    overflow: unset !important;
+    overflow-x: clip !important;
+  }
+  .f-carousel__slide {
+    overflow: visible !important;
+  }
+
+  .f-carousel--folders-menu .f-carousel__nav {
+    display: flex;
+    top: -8px;
+  }
+  .f-carousel--banks {
+    margin-top: 24px;
+  }
+
+}
